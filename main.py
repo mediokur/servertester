@@ -9,7 +9,7 @@ import mysql.connector
 
 # starting the connection to the mysql server
 cnx = mysql.connector.connect(user = 'root',
-                              password = 'Manboobs1',
+                              password = '********',
                               host = '127.0.0.1',
                               database = 'customerinfo')
 cursor = cnx.cursor()
