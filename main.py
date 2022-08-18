@@ -77,32 +77,30 @@ INSERT INTO payment_card(card_number, card_provider, credit_score)
 VALUES (%s, %s, %s)
 """)
 
-def update_flightinfo():
-    for name, code in zip(airline_name, airline_codes):
-        flightinfo_data = (str(name), str(code))
-        cursor.execute(update_flight, flightinfo_data)
 
-update_flightinfo()
+for name, code in zip(airline_name, airline_codes):
+    flightinfo_data = (str(name), str(code))
+    cursor.execute(update_flight, flightinfo_data)
 
-def update_card_information():
-    for number, provider, score in zip(credit_card_number, card_provider, credit_score):
-        card_info = (str(number), str(provider), int(score))
-        cursor.execute(update_paymentcard, card_info)
 
-update_card_information()
-# for name, city in zip(customer_name, customer_city):
-#     customer_personal = (str(name), str(city))
-#     cursor.execute(update_custname, customer_personal)
-#
-# for account, code in zip(routing_number, security_code):
-#     account_info = (str(account), str(code))
-#     cursor.execute(update_payment, account_info)
-#
-#
-#
-# for address, job in zip(customer_address, customer_job):
-#     customer_info = (str(address), str(job))
-#     cursor.execute(update_custinfo, customer_info)
+for number, provider, score in zip(credit_card_number, card_provider, credit_score):
+    card_info = (str(number), str(provider), int(score))
+    cursor.execute(update_paymentcard, card_info)
+
+
+for name, city in zip(customer_name, customer_city):
+    customer_personal = (str(name), str(city))
+    cursor.execute(update_custname, customer_personal)
+
+for account, code in zip(routing_number, security_code):
+    account_info = (str(account), str(code))
+    cursor.execute(update_payment, account_info)
+
+
+
+for address, job in zip(customer_address, customer_job):
+    customer_info = (str(address), str(job))
+    cursor.execute(update_custinfo, customer_info)
 
 
 
