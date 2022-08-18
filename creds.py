@@ -1,4 +1,4 @@
-sqlpass = "Manboobs1"
+sqlpass = "*****"
 sqluser = "root"
 
 
